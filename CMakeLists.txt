@@ -2,10 +2,11 @@ cmake_minimum_required(VERSION 3.0)
 
 project(linenoise)
 
-set(SOURCES linenoise.h linenoise.c)
+set(SOURCES linenoise.c)
 
-add_library(linenoise SHARED ${SOURCES})
-add_library(linenoise-static STATIC ${SOURCES})
+add_library(linenoise ${SOURCES})
+target_include_directories(teo PUBLIC .)
+
 add_executable(linenoise_example example.c)
 target_link_libraries(linenoise_example linenoise)
 
