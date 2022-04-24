@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 project(linenoise)
 
-set(SOURCES linenoise.c)
+set(SOURCES linenoise.h linenoise.c)
 
 add_library(linenoise SHARED ${SOURCES})
 add_library(linenoise-static STATIC ${SOURCES})
