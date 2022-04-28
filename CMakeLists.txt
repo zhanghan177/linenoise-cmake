@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(linenoise)
 
 set(SOURCES linenoise.c)
+add_definitions(-DLINENOISE_INTERRUPTIBLE)
 
 add_library(linenoise ${SOURCES})
 target_include_directories(linenoise PUBLIC .)
